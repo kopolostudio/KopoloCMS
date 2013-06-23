@@ -1,0 +1,392 @@
+/*clear css*/
+html, body{
+    height: 100%;
+    text-align: center;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+address,caption,cite,code,dfn,em,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
+
+/* general */
+html, body {
+    background: white;
+    color: #606060;
+    font: 14px Arial,Helvetica,sans-serif;
+    height: 100%;
+}
+p{
+    margin-bottom: 20px;
+}
+
+
+input, textarea, select {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+input {
+    height:20px;
+}
+
+button {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding:1px 5px;
+    cursor:pointer;
+}
+
+.error{color: red;}
+
+.wrapper {
+    margin: 0 auto;
+    width: 980px;
+    text-align: left;
+}
+
+.header .logo {
+    float:left;
+    padding: 25px 0 15px 0;
+}
+
+.header .logo .picture {
+    float:left;
+    margin-right: 15px;
+}
+
+.header .logo .slogan {
+    font-size:13px;
+}
+
+.header .logo a {
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#606060;
+}
+
+.header .search {
+    float:right;
+    padding: 30px 0 15px 0;
+}
+
+.header .search button {
+    padding:1px 5px;
+}
+
+.header .search input {
+    width:165px;
+}
+
+.header .phone{
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.header .menu {
+    clear:both;
+    margin-top:30px;
+    margin-bottom:15px;
+}
+
+.header .menu ul {
+    height: 35px;
+}
+
+.header .menu ul li {
+    float: left;
+    position:relative;
+}
+
+.header .menu ul li a {
+    display: block;
+    border-right: 1px solid #505050;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    height: 26px;
+    padding: 10px 24px 0;
+    text-decoration:none;
+    
+    background: #353535;
+    /* WebKit (Safari, Google Chrome */  
+    background: -webkit-gradient(linear, left top, left bottom, from(#4e4e4e), to(#353535));  
+    /* Mozilla/Gecko (Firefox) */  
+    background: -moz-linear-gradient(top, #4e4e4e, #353535);  
+    /* Internet Explorer 5.5 - 7 */  
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4e4e4e, endColorstr=#353535);  */
+    /* Internet Explorer 8 */  
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4e4e4e, endColorstr=#353535)";*/
+}
+
+.header .menu ul li a:hover {
+    background: #696969;
+}
+
+.header .menu ul li.active a {
+    background: #696969;
+}
+
+.header .menu ul li.parent a span {
+    background: url(/Themes/Default/i/arrow-bottom.gif) no-repeat right 7px;
+    padding-right:15px;
+}
+
+.header .menu ul li.first a {
+    border-radius: 5px 0 0 5px;
+}
+
+.header .menu ul li.last a {
+    border-radius: 0 5px 5px 0;
+    border-right: none;
+}
+
+.header .menu ul li ul.submenu {
+    position:absolute;
+    display:none;
+}
+
+.header .menu ul li ul.submenu li {
+    background: #353535;
+    opacity:0.9;
+    width:100%;
+    border-bottom: 1px solid #505050;
+}
+
+.header .menu ul li ul.submenu li.last {
+    border-radius:0 0 5px 5px;
+}
+
+.header .menu ul li ul.submenu li a {
+    border:none;
+    white-space:nowrap;
+    background: none;
+    border:none;
+}
+
+.header .menu ul li ul.submenu li a:hover {
+    background: #696969;
+}
+
+.header .menu ul li.parent ul.submenu li a span {
+    background: none;
+    padding:0;
+}
+
+.search input{
+    margin-right: 10px;
+}
+
+.page {
+    line-height:24px;
+}
+
+.content, .right .block {
+    border: 1px solid #dddddd;
+    border-radius:5px;
+}
+
+.content {
+    float:left;
+    width:670px;
+    padding:25px;
+}
+
+.content h1 {
+    line-height: 21px;
+    font-size: 24px;
+    padding-bottom:25px;
+}
+.content h2{
+    font-size: 18px;
+}
+.content h3{
+    font-size: 14px;
+}
+
+.right {
+    float:right;
+    width: 236px;
+}
+
+.right .block {
+    margin-bottom:20px;
+    padding:15px;
+}
+
+.right h2 {
+    font-size:20px;
+    margin:0 0 10px 0;
+}
+
+.right h2 a {
+    color:#606060;
+}
+
+/* gallery */
+.photo-gallery {
+    margin-top:30px;
+}
+
+.photo-gallery .image {
+    float:left;
+    height:190px;
+    width:150px;
+    padding:8px;
+    text-align:center;
+}
+
+.photo-gallery .image span {
+    font-size:12px;
+    color:#808080;
+    line-height:17px;
+    display:block;
+}
+
+.photo-gallery .image img {
+    border-radius: 5px 5px 5px 5px;
+}
+
+/*quickform*/
+.quickform .element{
+    padding-bottom: 10px;
+}
+.quickform .element input,
+.quickform .element select,
+.quickform .element textarea
+{
+    width: 400px;
+}
+
+.quickform .element textarea
+{
+    height: 80px;
+}
+
+.quickform .element .captcha input{
+    width: 100px;
+    height: 23px;
+    vertical-align: top;
+}
+.quickform .element .captcha img{
+    vertical-align: top;
+}
+.quickform .required{
+    color: red;
+}
+
+.quickform .row label{
+    font-weight:bold;
+}
+
+.quickform .element button {
+    border: 1px solid #DDDDDD;
+    border-radius: 5px 5px 5px 5px;
+    padding:5px 10px;
+}
+
+.quickform .element .error {
+    font-size:11px;
+}
+
+.quickform .element .date select {
+    width:70px;
+    padding:2px;
+    margin-right:10px;
+}
+
+/* Info. news etc. */
+.info-list li{
+    margin-bottom: 10px;
+}
+
+/* Message box */
+.messages-box {
+  margin:auto;
+  width:500px;
+}
+
+.messages-box .messages {
+  position:relative;
+  margin-bottom:10px;
+  min-height:32px;
+  vertical-align:middle;
+  padding:10px;
+  font-size:12px;
+  opacity:0.8;
+  border-radius:5px;
+}
+
+.messages-box .messages span {
+  margin-left:52px;
+  display:block;
+  padding-bottom:3px;
+}
+
+
+.messages-box .errors {
+  background: #fedace url('/Themes/Admin/i/icons/error.png') no-repeat 10px 10px;
+  border: 1px solid #f3bfb4;
+  color:#8f0b19;
+}
+
+.messages-box .warnings {
+  background: #fefbc8 url('/Themes/Admin/i/icons/warning.png') no-repeat 10px 10px;
+  border: 1px solid #eadda8;
+  color:#535955;
+}
+
+.messages-box .success {
+  background: #cbfea9 url('/Themes/Admin/i/icons/tick.png') no-repeat 10px 10px;
+  border: 1px solid #94d36b;
+  color:#145902;
+}
+
+.announce {
+    /*clear:both;*/
+}
+
+.announce .picture, .news .picture {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.footer {
+    clear:both;
+    padding-top:15px;
+    font-size:12px;
+    color:#808080;
+}
+
+.footer div {
+    display:inline;
+    margin-right:20px;
+}

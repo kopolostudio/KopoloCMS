@@ -1,0 +1,6 @@
+AddDefaultCharset UTF-8
+
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^(.*)$ index.php [L,QSA]

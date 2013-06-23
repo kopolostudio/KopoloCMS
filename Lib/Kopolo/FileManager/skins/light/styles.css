@@ -1,0 +1,180 @@
+/*clear css*/
+html, body{
+  height: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img { 
+  border:0;
+}
+address,caption,cite,code,dfn,em,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym { border:0;
+}
+
+/* general */
+body {
+  font-family:Verdana,Arial,Tahoma;
+  font-size:14px;
+  color:#505050;
+  background-color:white;
+}
+.clear {
+  clear:both;
+}
+
+.toolbar {
+  background-color:#EBEBEB;
+  padding:5px;
+  margin-bottom:20px;
+  font-size:12px;
+}
+
+.tree {
+  float:left;
+  width:200px;
+}
+
+.tree ul {
+  list-style:none outside none;
+  padding-left:15px;
+}
+
+.tree ul li a.empty, .tree ul li a.expand, .tree ul li a.open_folder {
+  text-decoration:none;
+  display:block;
+  float:left;
+  width:9px;
+  height:17px;
+  margin-right:2px;
+}
+
+.tree ul li a.expand {
+  background:transparent url(icons/marker-closed-folder.gif) no-repeat 0 8px;
+}
+
+.tree ul li a.open_folder {
+  background:transparent url(icons/marker-open-folder.gif) no-repeat 0 8px;
+}
+
+.tree ul li a.folder {
+  display:inline-block;
+  color:#505050;
+  background:transparent url(icons/folder.png) no-repeat;
+  padding-left:20px;
+  margin:5px 0;
+  text-decoration:none;
+}
+
+.tree ul li a.folder:hover {
+  background:transparent url(icons/folder-arrow.png) no-repeat;
+  text-decoration:underline;
+}
+
+.tree ul li a.selected {
+  background:transparent url(icons/folder-open.png) no-repeat;
+  color:red;
+}
+
+.content {
+	margin-left:200px;
+    padding-bottom: 20px;
+}
+
+.content .file {
+  float:left;
+  width:64px;
+  height:80px;
+  margin:0 15px 15px 0;
+  font-size:11px;
+  text-align:center;
+  padding:10px;
+  border:1px solid #EBEBEB;
+}
+
+.content .file:hover {
+  border:1px solid #A0A0A0;
+  cursor:pointer;
+}
+
+.content .selected {
+  background-color:#EBEBEB;
+}
+
+.content .file .preview {
+  width:64px;
+  height:64px;
+  padding:0;
+  margin-bottom:5px;
+}
+
+.content .file .name a {
+  color:#505050;
+  text-decoration:none;
+}
+
+.info {
+  background-color:#EBEBEB;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:7px;
+  font-size:11px;
+}
+
+/* Fileuploader */
+.qq-uploader { position:relative; width: 100%;}
+
+.qq-upload-button {
+    display:block; /* or inline-block */
+    width: 240px; padding: 7px 0; text-align:center;    
+    background:#880000; border-bottom:1px solid #ddd;color:#fff;
+}
+.qq-upload-button-hover {background:#cc0000;}
+.qq-upload-button-focus {outline:1px dotted black;}
+
+.qq-upload-drop-area {
+    position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;
+    background:#FF9797; text-align:center; 
+}
+.qq-upload-drop-area span {
+    display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;
+}
+.qq-upload-drop-area-active {background:#FF7171;}
+
+.qq-upload-list {
+  padding:0;
+}
+.qq-upload-list li { margin:0; padding:0; line-height:15px;}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    margin-right: 7px;
+}
+
+.qq-upload-file {}
+.qq-upload-spinner {display:inline-block; background: url("loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}
+.qq-upload-size,.qq-upload-cancel {font-size:11px;}
+
+.qq-upload-failed-text {display:none;}
+.qq-upload-fail .qq-upload-failed-text {display:inline;}

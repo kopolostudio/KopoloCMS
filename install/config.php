@@ -1,0 +1,1 @@
+<?php /* Пустой config.php */

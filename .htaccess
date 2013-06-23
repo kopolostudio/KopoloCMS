@@ -1,0 +1,37 @@
+ErrorDocument 404 /error404/
+DirectoryIndex start.php
+
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+
+RewriteRule .* - [E=HTTP_IF_MODIFIED_SINCE:%{HTTP:If-Modified-Since}]
+RewriteRule .* - [E=HTTP_IF_NONE_MATCH:%{HTTP:If-None-Match}]
+
+#редирект с www на не-www
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST}	^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+#captcha
+RewriteRule Files/captcha.png /Lib/Kopolo/Captcha/ [L]
+
+#favicon
+RewriteRule ^favicon.ico /Themes/Ada/favicon.ico [L]
+
+#файлы сайтов и тем
+RewriteRule	^(Themes|Files|Tmp/Clones)/(.*)$ $1/$2 [L]
+
+#файлы из корня
+RewriteRule	^(.*).(xml|txt|html)$ $1.$2 [L]
+
+#admin
+RewriteRule	^admin/module/(.*)/$ start.php?nick=module&modules=$1 [L,QSA]
+
+### новости
+RewriteRule	^news/([0-9]+)/$ start.php?item_id=$1&nick=news [L,QSA]
+RewriteRule	^news/page([0-9]+)/$ start.php?nick=news&page=$1 [L,QSA]
+RewriteRule	^news/all/$ start.php?nick=news&page=all [L,QSA]
+
+RewriteRule	^(.*)$ start.php [L,QSA]
